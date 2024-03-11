@@ -1,0 +1,48 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.card-stack {
+  font-weight: 500;
+  color: #646cff;
+  display: flex;
+  flex-direction: column;
+  background-color: #242424;
+}
+
+.card {
+  position: absolute;
+  z-index: 1;
+  width: 150px;
+  height: 250px;
+  margin: 1rem;
+}
+
+.card:nth-child(1) {
+  z-index: 3;
+}
+
+.card:nth-child(2) {
+  z-index: 2;
+  transform: translateY(-25px) scale(0.9);
+}
+
+.card:nth-child(3) {
+  z-index: 1;
+  transform: translateY(-50px) scale(0.8);
+}
