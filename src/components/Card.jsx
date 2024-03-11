@@ -1,13 +1,14 @@
 import {
     motion,
     useMotionValue,
-    transform
 } from "framer-motion"
 
 import { useEffect, useState } from "react";
+import { cardStore } from "../store/cardStore";
 
 const Card = ({ backgroundColor, index }) => {
     const [isRendered, setIsRendered] = useState(true);
+    const { addCard } = cardStore((state) => state);
     const x = useMotionValue(0)
     const y = useMotionValue(-index * 10)
 
@@ -16,6 +17,7 @@ const Card = ({ backgroundColor, index }) => {
             if (x.get() > 250) {
                 setIsRendered(false);
                 console.log('added to keep pile');
+                addCard({ backgroundColor });
             }
             if (x.get() < -250) {
                 setIsRendered(false);

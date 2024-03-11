@@ -17,12 +17,19 @@
   height: 50vh;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .card-stack {
   font-weight: 500;
   color: #646cff;
   display: flex;
   flex-direction: column;
-  background-color: #242424;
 }
 
 .card {
@@ -33,16 +40,9 @@
   margin: 1rem;
 }
 
-.card:nth-child(1) {
-  z-index: 3;
-}
-
-.card:nth-child(2) {
-  z-index: 2;
-  transform: translateY(-25px) scale(0.9);
-}
-
-.card:nth-child(3) {
-  z-index: 1;
-  transform: translateY(-50px) scale(0.8);
+.saved-cards {
+  display: flex;
+  flex-direction: row;
+  width: 20vw;
+  gap: 1rem;
 }
